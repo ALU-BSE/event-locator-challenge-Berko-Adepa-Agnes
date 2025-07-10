@@ -1,29 +1,74 @@
 [
   {
     "id": 1,
-    "name": "Music Fest Kigali",
-    "date": "2025-07-20",
-    "city": "Kigali",
-    "location": "Kigali Arena",
-    "category": "Music",
-    "description": "A night of live music, fun, and dance!"
+    "title": "Kigali Tech Summit",
+    "date": "2025-08-10",
+    "location": "Kigali Convention Center, Rwanda",
+    "category": "Technology",
+    "description": "A platform for African innovators to showcase ideas and network with global tech leaders.",
+    "image": "img/kigali-tech.jpg"
   },
   {
     "id": 2,
-    "name": "Tech Innovators Expo",
-    "date": "2025-08-05",
-    "city": "Kigali",
-    "location": "Kigali Convention Center",
-    "category": "Tech",
-    "description": "Showcasing the latest in African tech innovation."
+    "title": "Women Empowerment Conference",
+    "date": "2025-09-15",
+    "location": "Kumasi Cultural Centre, Ghana",
+    "category": "Social Impact",
+    "description": "Empowering girls and women through workshops, leadership panels, and mentorship sessions.",
+    "image": "img/women-empowerment.jpg"
   },
   {
     "id": 3,
-    "name": "Kumasi Art Walk",
-    "date": "2025-07-15",
-    "city": "Kumasi",
-    "location": "Cultural Centre",
-    "category": "Art",
-    "description": "Explore amazing artworks and meet local artists."
+    "title": "Faith & Leadership Seminar",
+    "date": "2025-11-02",
+    "location": "Accra, Ghana",
+    "category": "Spiritual",
+    "description": "A weekend of spiritual growth, leadership training, and community building hosted by Pool of Grace Ministry.",
+    "image": "img/faith-leadership.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Youth Coding Bootcamp",
+    "date": "2025-07-20",
+    "location": "Kigali Innovation Hub, Rwanda",
+    "category": "Education",
+    "description": "A free hands-on coding bootcamp for young girls to learn HTML, CSS, and JavaScript.",
+    "image": "img/coding-bootcamp.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Pan-African Climate Action Forum",
+    "date": "2025-10-12",
+    "location": "Nairobi, Kenya",
+    "category": "Environment",
+    "description": "A gathering of youth leaders and policymakers to develop green solutions for Africa’s future.",
+    "image": "img/climate-action.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Rwanda Women's Health Day",
+    "date": "2025-08-25",
+    "location": "Kigali Women’s Hospital Grounds",
+    "category": "Health",
+    "description": "Free screenings, wellness sessions, and mental health talks for women in the community.",
+    "image": "img/health-day.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Creative Arts Festival",
+    "date": "2025-09-30",
+    "location": "University of Ghana, Legon",
+    "category": "Art & Culture",
+    "description": "Showcasing young African talents in fashion, poetry, music, and visual arts.",
+    "image": "img/arts-festival.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Girls in STEM Summit",
+    "date": "2025-11-20",
+    "location": "Kigali Convention Center",
+    "category": "STEM",
+    "description": "An inspiring summit to encourage young girls to pursue careers in science, technology, engineering, and math.",
+    "image": "img/stem-summit.jpg"
   }
 ]

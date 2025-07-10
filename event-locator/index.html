@@ -2,40 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Event Locator - Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Locator</title>
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="container mt-5">
-    <h1 class="text-center mb-4">Find Events in Your City</h1>
-    <form id="searchForm" action="events.html" method="GET">
-      <div class="row g-3">
-        <div class="col-md-4">
-          <input type="text" class="form-control" name="city" placeholder="Enter City" required />
-        </div>
-        <div class="col-md-4">
-          <input type="date" class="form-control" name="date" />
-        </div>
-        <div class="col-md-4">
-          <select name="category" class="form-select">
-            <option value="">All Categories</option>
-            <option value="music">Music</option>
-            <option value="tech">Tech</option>
-            <option value="sports">Sports</option>
-            <option value="art">Art</option>
-          </select>
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <button type="submit" class="btn btn-primary">Search Events</button>
-      </div>
-    </form>
-  </div>
+  <header data-aos="fade-down">
+    <h1>Welcome to the Event Locator</h1>
+    <p>Find inspiring events happening near you</p>
+    <a href="events.html" class="btn">Explore Events</a>
+  </header>
 
-  <footer class="text-center mt-5 text-muted">
-    Built with ❤️ by Agnes Adepa Berko
+  <main>
+    <section class="hero-image" data-aos="zoom-in" data-aos-delay="200">
+      <img src="../img/hero.jpg" alt="Event Image" />
+    </section>
+
+    <section class="about" data-aos="fade-up" data-aos-delay="300">
+      <h2>Why Use This?</h2>
+      <p>Discover opportunities that empower, educate, and inspire across Africa.</p>
+    </section>
+  </main>
+
+  <footer data-aos="fade-up" data-aos-delay="400">
+    <p>&copy; 2025 Agnes Adepa Berko - Event Locator</p>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
