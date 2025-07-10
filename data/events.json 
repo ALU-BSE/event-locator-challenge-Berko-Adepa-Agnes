@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Music Fest Kigali",
+    "date": "2025-07-20",
+    "city": "Kigali",
+    "location": "Kigali Arena",
+    "category": "Music",
+    "description": "A night of live music, fun, and dance!"
+  },
+  {
+    "id": 2,
+    "name": "Tech Innovators Expo",
+    "date": "2025-08-05",
+    "city": "Kigali",
+    "location": "Kigali Convention Center",
+    "category": "Tech",
+    "description": "Showcasing the latest in African tech innovation."
+  },
+  {
+    "id": 3,
+    "name": "Kumasi Art Walk",
+    "date": "2025-07-15",
+    "city": "Kumasi",
+    "location": "Cultural Centre",
+    "category": "Art",
+    "description": "Explore amazing artworks and meet local artists."
+  }
+]
