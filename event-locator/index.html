@@ -3,38 +3,217 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Event Locator</title>
+  <title>Agnes' Event Locator</title>
   <link rel="stylesheet" href="../css/style.css" />
 
-  <!-- AOS CSS -->
+  <!-- AOS CSS for animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6f61, #f9a825);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin: 10px 0 20px;
+    }
+
+    .btn {
+      background: white;
+      color: #ff6f61;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #fbe9e7;
+    }
+
+    .hero-image {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .hero-image img {
+      width: 80%;
+      max-width: 700px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .about {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      color: #ff6f61;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    /* Screenshot section */
+    .screenshot {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .screenshot h2 {
+      color: #f9a825;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .screenshot img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .screenshot img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      display: none;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 5px 15px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .about p, .screenshot h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header data-aos="fade-down">
-    <h1>Welcome to the Event Locator</h1>
-    <p>Find inspiring events happening near you</p>
+    <h1>Welcome to Agnes' Event Locator</h1>
+    <p>Find empowering, educational, and inspiring events across Africa</p>
     <a href="events.html" class="btn">Explore Events</a>
   </header>
 
   <main>
     <section class="hero-image" data-aos="zoom-in" data-aos-delay="200">
-      <img src="../img/hero.jpg" alt="Event Image" />
+      <img src="../img/hero.jpg" alt="Inspiring Event Image" />
     </section>
 
     <section class="about" data-aos="fade-up" data-aos-delay="300">
       <h2>Why Use This?</h2>
-      <p>Discover opportunities that empower, educate, and inspire across Africa.</p>
+      <p>Discover life-changing opportunities—from tech workshops to women's empowerment forums—curated with love by Agnes Adepa Berko.</p>
+    </section>
+
+    <!-- Screenshot Section -->
+    <section class="screenshot" data-aos="fade-up" data-aos-delay="400">
+      <h2>Platform Preview</h2>
+      <img src="../img/agnes-screenshot.jpg" alt="Screenshot of the Event Locator" id="screenshot-img" />
     </section>
   </main>
 
-  <footer data-aos="fade-up" data-aos-delay="400">
-    <p>&copy; 2025 Agnes Adepa Berko - Event Locator</p>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="close-lightbox">&times;</span>
+    <img src="../img/agnes-screenshot.jpg" alt="Fullscreen Screenshot" />
+  </div>
+
+  <footer data-aos="fade-up" data-aos-delay="500">
+    <p>&copy; 2025 Agnes Adepa Berko - Empowering Dreams, One Event at a Time 🌍</p>
   </footer>
 
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    // Lightbox script
+    const screenshot = document.getElementById('screenshot-img');
+    const lightbox = document.getElementById('lightbox');
+    const closeBtn = document.getElementById('close-lightbox');
+
+    screenshot.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
   </script>
 </body>
 </html>
